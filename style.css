@@ -1,0 +1,416 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+body {
+  background: #fff;
+  font-family: 'Verdana', sans-serif;
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+}
+
+h1 {
+  color: #8C8C8C;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Josefin Slab', serif;
+  font-size: 60px;
+  margin-top: 10vh;
+  letter-spacing: 10px;
+}
+
+.accordion-container {
+  width: 40%;
+  min-width: 500px;
+  margin: 5vh auto;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: -2px 1px 2px 2px #212121;
+}
+
+.accordion-container div:hover {
+  background-color: #ff784f;
+}
+.accordion-container div {
+  border-top: 3px solid;
+  border-color: #ff784f;
+  transition: border-color 0.5s ease-in;
+  text-align: center;
+}
+
+.accordion-container div:first-child {
+  border-top: none;
+}
+
+.answer, .summary {
+  display: inline-block;
+}
+
+.answer {
+  background: #3a3042;
+  color: #fff;
+}
+
+.summary {
+  font-family: 'Josefin Slab', serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 25px;
+  padding: 15px;
+  font-size: 23px;
+  margin-top: 8px;
+}
+
+/*.summary:before {
+  content: '--\0000a0';
+}
+.summary:after {
+  content: '--\0000a0';
+}*/
+
+.folding-pannel {
+  display: block;
+  transition: all 0.2s ease-in;
+  line-height: 40px;
+  border-top: 2px solid #3a3042;
+}
+
+.active .summary {
+  border-color: transparent;
+  transition: border-color 0.2s ease-out;
+}
+
+.inactive .folding-pannel {
+  transform-origin: 50% 0%;
+  transform: perspective(250px) rotateX(-90deg);
+  transition: all 0.4s ease-in-out;
+  height: 0;
+}
+
+.active .folding-pannel {
+  transform: perspective(350px) rotateX(0deg);
+  transition: all 0.4s ease-in-out;
+  height: 50px;
+  line-height: 50px;
+  text-indent: 40px;
+}
+
+.accordion-containerQ {
+  width: 50%;
+  margin: 5vh auto;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: -2px 1px 2px 2px #212121;
+}
+
+.accordion-containerQ div {
+  border: 6px solid;
+  border-color: #ff784f;
+  transition: border-color 0.5s ease-in;
+  text-align: center;
+  height: 100px;
+}
+
+
+
+.inactive-i {
+  border: 6px solid;
+  border-color: #ff784f;
+  transition: border-color 0.5s ease-in;
+  text-align: left;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: -2px 1px 2px 2px #212121;
+  width: 25%;
+}
+
+.inactive-i:hover {
+  background: #ff784f;
+}
+
+.inactive-i {
+  display: inline-block;
+}
+
+.inactive-i:nth-child(2) {
+  margin-left:16%;
+}
+
+#inline {
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+#x {
+  margin-top : 10px;
+  margin-left : 10px;
+}
+
+#question {
+  text-align: center;
+}
+
+#answer {
+  font-size : 15px;
+  display: grid;
+  font-weight: bold;
+  text-align: center;
+}
+
+.corrAndIncorr{
+  font-size: 20px;
+  display: grid;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.inactive-C {
+  border: 6px solid;
+  border-color: greenyellow;
+  transition: border-color 0.5s ease-in;
+  text-align: left;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: -2px 1px 2px 2px #212121;
+  width: 25%;
+  display: inline-block;
+  border-radius: 70px;
+}
+
+.inactive-In {
+  border : 6px solid;
+  border-color : #F20000;
+  transition : border-color 0.5s ease-in;
+  text-align : left;
+  height : 100px;
+  background-color : #fff;
+  box-shadow : -2px 1px 2px 2px #212121;
+  width : 25%;
+  display : inline-block;
+  margin-left :16%;
+  border-radius : 70px;
+}
+
+.task {
+  cursor : text;
+}
+
+.taskHead {
+  margin-top: 20px;
+}
+
+#leftFinalb {
+ margin-left: 16%;
+}
+
+.justify-content-around {
+  margin-top: 14%;
+}
+
+
+@media ( max-width:1024px ) {
+  .inactive-i {
+    height: 120px;
+  }
+
+  .accordion-containerQ {
+    margin-top: 170px;
+  }
+
+  #inline {
+    margin-top: 15%;
+  }
+}
+
+.restartMessage {
+  margin-top: 0;
+  text-align: center;
+}
+
+.newB {
+  width: 150px;
+  margin-top: 40px;
+}
+
+.difficulty {
+  width: 400px;
+  height: 80px;
+}
+
+.diff .col-4 .difficulty {
+  margin-top: 40px;
+}
+.diff .col-5 .var {
+  margin-top: 30px;
+}
+
+.var {
+  width: 400px;
+  height: 80px;
+  color: black;
+  /*color: white;*/
+  white-space: normal;
+}
+
+.tasks {
+  margin-top: 10%;
+}
+
+.question {
+  text-align: center;
+}
+
+.press {
+  width: 865px;
+  height: 80px;
+  margin-top: 10%;
+}
+
+.tables {
+  margin-top: 10%;
+}
+
+.mark {
+  background-color :rgb(0, 123, 255);
+}
+
+#mainMenu {
+  margin-top: 10px;
+}
+
+#menuH {
+  margin-top: 14%;
+}
+
+@media (max-width: 1200px) {
+
+  #mainMenu {
+    height: 140px;
+  }
+
+  .logo {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 300px;
+    top: 15px;
+  }
+
+  #menu {
+    height: 100px;
+  }
+
+  .diff .col-4 .difficulty {
+    margin-top: 100px;
+  }
+
+  .difficulty {
+    width: 400px;
+    height: 100px;
+  }
+
+  .diff {
+    left: -70px;
+    position: relative;
+   }
+
+  .col-5 {
+    max-width: 100%;
+  }
+
+  .diff .col-5 .var {
+    margin-top: 50px;
+    position: relative;
+    left: 50px;
+    height: 120px;
+    width: 700px;
+  }
+
+  .press {
+    width: 700px;
+    height: 120px;
+    margin-top: 20%;
+  }
+
+  .question {
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .p {
+    left: 70px;
+  }
+
+  .card {
+    width: 700px;
+  }
+
+ }
+
+ @media (max-width: 992px) {
+  .col-10 {
+    left: 0px;
+  }
+  .x {
+    left: -70px;
+  }
+ }
+
+ @media (max-height: 1080px) {
+  #menuH {
+    margin-top: 1%;
+  }
+  .card {
+    width: 865px;
+  }
+ }
+
+.alert-primary {
+  color:black;
+}
+
+.badge-secondary {
+  color: lightgoldenrodyellow;
+  background-color: gainsboro;
+}
+
+.text-white {
+  color: #fff !important;
+  text-align: center;
+}
+
+.mb-0, .my-0 {
+  text-align: center;
+}
+
+.picture {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  top: -40px;
+  left: 50%;
+  margin: -125px 0 0 -125px;
+  margin-top: 10px;
+}
+
+.logo{
+  position: relative;
+  left: 35%;
+  width: 31%;
+}
+
+
+
+
+
+
+
+
+
+
